@@ -1,0 +1,42 @@
+// LINKED LIST TRAVERSAL AND CREATION
+#include <stdio.h>
+#include <stdlib.h>//as we use malloc function
+
+struct node{
+    int data;
+    struct node*next;
+};//self refrencing structure
+void linkedList(struct node*ptr){
+    while(ptr!=NULL){
+        printf("element:%d\n",ptr->data);
+        ptr=ptr->next;
+    }
+}
+
+int main(){
+    struct node*head;
+    struct node*second;
+    struct node*third;
+    struct node*fourth;//declare head,second,third,fourth
+    //allocate memory in heap
+    head=(struct node*)malloc(sizeof(struct node));
+     second=(struct node*)malloc(sizeof(struct node));
+      third=(struct node*)malloc(sizeof(struct node));
+       fourth=(struct node*)malloc(sizeof(struct node));//dynamic memory allocation
+       head->data=7;
+       head->next=second;
+       
+       second->data=11;
+       second->next=third;
+       
+       third->data=13;
+       third->next=fourth;
+       
+       fourth->data=15;
+       fourth->next=NULL;
+        linkedList(head);
+       return 0;
+       
+       
+    
+}
