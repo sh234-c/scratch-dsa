@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct circularQueue{
+    int size;
+    int front;
+    int rear;
+    int*arr;
+    
+};
+
+int isEmpty(struct circularQueue*q){
+    if(q->rear==q->front){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    
+}
+int isFull(struct circularQueue*q){
+    if((q->rear)%q->size==q->front){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+void enqueue(struct circularQueue*q,int val){
+    if(isFull(q)){
+        printf("queue is full");
+    }
+    else{
+        q->rear=(q->rear+1)%q->size;//circular increment
+        q->arr[q->rear]==val;
+    }
+}
+int dequeue(struct circularQueue*q){
+    int val=-1;
+    if(isEmpty(q)){
+        printf("queue is empty");
+    }
+    else{
+        q->front=(q->front)%q->size;//circular increment
+        val=q->arr[q->front];
+    }
+    return val;
+}
+
+int main(){
+    struct circularQueue q;
+    q.size=3;
+    q.front=q.rear=0;//exception in circular queue
+    q.arr=(int*)malloc(q.size*sizeof(int));
+    //enqueue few element int the queue
+    enqueue(&q,12);
+     enqueue(&q,13);
+
+        printf("dequeuing element %d\n",dequeue(&q));
+          printf("dequeuing element %d\n",dequeue(&q));
+          enqueue(&q,14);
+           enqueue(&q,15);
+
+
+        if(isEmpty(&q)){
+            printf("queue is empty\n");
+        }
+
+         if(isFull(&q)){
+            printf("queue is full\n");
+        }
+    return 0;
+}
