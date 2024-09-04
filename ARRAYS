@@ -1,0 +1,132 @@
+//ARRAYS CONCEPTS
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+
+// int arr[3]={1,2,3};
+// cout<<arr[0];//array index starts from 0
+// return 0;
+// }
+
+//ARRAY MARKS CONCEPTS:LOOPS
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int marks[6];//so we have to store the marks of the 6 students
+    
+//     for(int i=0;i<6;i++){//this is the index which starts from 0
+//         cout<<"enter the marks of"<<i<<"th students :"<<endl;
+//         cin>>marks[i];
+//     }
+//     for(int i=0;i<6;i++){
+//         cout<<"marks of"<<i<<"th student is"<<marks[i]<<endl;
+//     }
+//     return 0;
+// }
+
+//CONCEPTS OF TYPECASTING
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     float a=89.99;
+//     cout<<(int) a;
+//     return 0;
+// }
+
+//NOW ARRAY BASICS QUESTION
+
+//SUM OF THE ARRAY ELEMENTS 
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[100],n,sum=0;//basically this this the size of the array 
+//     cout<<"enter the elements of the array:";
+//     cin>>n;
+    
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];//accepting the values
+//     }
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//     }
+//     cout<<"the sum of the element of array is:"<<sum;
+//     return 0;
+// }
+
+//SUM AND PRODUCT OF THE ELEMENTS OF THE ARRAY
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[100],n,sum=0,prod=1;
+//     cout<<"enter the size of the array:";
+//     cin>>n;
+//     cout<<"enter the elements of the array:";
+    
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];//here we accepting the values
+//     }
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//         prod=prod*arr[i];
+//     }
+//     cout<<"the sum of the elements of array is:"<<sum<<endl;
+//     cout<<"the product of the elements of array is:"<<prod;
+//     return 0;
+// }
+
+// 
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[67],n;
+//     cout<<"enter the size of the array:";
+//     cin>>n;//take the size
+//     cout<<"enter the elements of the array:";
+    
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];//here accept the values
+//     }
+//     for(int i=n-1;i>=0;i--){
+//         cout<<" "<<arr[i];
+//     }
+//     return 0;
+// }
+
+//SIZE OF THE ARRAY
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int length=sizeof(arr)/sizeof(arr[0]);
+//     cout<<"the length of array is:"<<length;
+//     return 0;
+// }
+
+//TRAVERSAL OF AN ARRAY
+
+// #include <iostream>
+// using namespace std;
+
+// void display(int*arr,int n){
+//     for(int i=0;i<n;i++){
+//         cout<<" "<<arr[i];
+//     }
+// }
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     display(arr,n);
+//     return 0;
+// }
